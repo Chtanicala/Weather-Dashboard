@@ -1,0 +1,25 @@
+header {
+    text-align: center;
+    color:aliceblue;
+    background-image: linear-gradient(to right, blue, purple);
+    padding-bottom: 1rem;
+}
+#city-search {
+    width: 100%;
+    text-align: center;
+}
+
+#search-button-container {
+    border-bottom: 2px solid black;
+    padding-bottom: 1rem;
+}
+
+#searchBtn {
+    width: 100%;
+}
+
+#searchInput {
+    margin-bottom: 1rem;
+    width: 100%
+}
+
