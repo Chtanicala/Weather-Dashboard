@@ -1,6 +1,6 @@
-apiLink = "https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,minutely,hourly,alerts&units=imperial&appid=7aa6a99f3c6b2918ed1aa6023a5c4fdd"
+apiLinkFormat = "api.openweathermap.org/data/2.5/forecast?q={city name},{state code},{country code}&units=imperial&appid=7aa6a99f3c6b2918ed1aa6023a5c4fdd"
 
-currentAPI = "api.openweathermap.org/data/2.5/weather?id={city id}&appid={API key}"
+apiLink = "https://api.openweathermap.org/data/2.5/forecast?q=Toledo&units=imperial&cnt=7&appid=7aa6a99f3c6b2918ed1aa6023a5c4fdd"
 
 fetch(apiLink)
     .then(response => response.json())
