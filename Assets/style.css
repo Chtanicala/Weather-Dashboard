@@ -23,3 +23,31 @@ header {
     width: 100%
 }
 
+#current {
+    border: 2px solid black;
+}
+
+.card {
+    background-color: aqua;
+    margin-right: 20px;
+    margin-left: 43px;
+    border-radius: 30px;
+    border-color: rgb(0, 155, 155);
+    border-width: 3px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.596);
+}
+
+h2 {
+    margin-top: 1%;
+    text-align: center;
+}
+
+h4 {
+    margin-top: 1%;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 3%;
+}

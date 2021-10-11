@@ -18,24 +18,99 @@
     <header>
       <h1>Weather-Dashboard</h1>
     </header>
-   
-      <div class="col-3">
-        <h2 class="row text-center" id="city-search">Search for a City:</h2>
+
+      <div class="container col-3">
+
+            <h2 class="row text-center" id="city-search">Search for a City:</h2>
+            
+            <div class="row" id="search-input-container">
+              <input id="searchInput" type ="text">
+            </div>
+
+            <div class="row" id="search-button-container">
+              <button class ="button" id="searchBtn">Search</button>
+            </div>
+
+      </div>
+
+      <div id = "history">
+
+      </div>
+
+      <div class="container col-3" id="current-day">
+            
+        <h2 id="city-current">City (Date)</h2>
+        <ol>
+          <li id="temp-current">Temp: </li>
+          
+          <li id="wind-current">Wind: </li>
+          
+          <li id="humidity-current">Humidity: </li>
+
+          <li id="uv-current">UV Index: </li>
+        </ol>
+      </div>
+
+      <div class="container row col-12" id="forecast">
+        <div class="col-2 card forecast-day">
+          <h4 id="date-1">Date+1</h4>
+          <ol>
+            <li id="temp-1">Temp+1</li>
+            
+            <li id="wind-1">Wind+1</li>
+            
+            <li id="humidity-1">Humidity+1</li>
+          </ol>
+        </div>
+
+        <div class="col-2 card forecast-day">
+          <h4 id="date-2">Date+2</h4>
+          <ol>
+            <li id="temp-2">Temp+2</li>
+            
+            <li id="wind-2">Wind+2</li>
+            
+            <li id="humidity-2">Humidity+2</li>
+          </ol>
+        </div>
+
         
-        <div class="row" id="search-input-container">
-          <input id="searchInput" type ="text">
+        <div class="col-2 card forecast-day">
+          <h4 id="date-3">Date+3</h4>
+          <ol>
+            <li id="temp-3">Temp+3</li>
+            
+            <li id="wind-3">Wind+3</li>
+            
+            <li id="humidity-3">Humidity+3</li>
+          </ol>
         </div>
 
-        <div class="row" id="search-button-container">
-          <button class ="button" id="searchBtn">Search</button>
+        
+        <div class="col-2 card forecast-day">
+          <h4 id="date-4">Date+4</h4>
+          <ol>
+            <li id="temp-4">Temp+4</li>
+            
+            <li id="wind-4">Wind+4</li>
+            
+            <li id="humidity-4">Humidity+4</li>
+          </ol>
+        </div>
+
+        <div class="col-2 card forecast-day">
+          <h4 id="date-5">Date+5</h4>
+          <ol>
+            <li id="temp-5">Temp+5</li>
+            
+            <li id="wind-5">Wind+5</li>
+            
+            <li id="humidity-5">Humidity+5</li>
+          </ol>
         </div>
 
       </div>
 
-      <div class="container col-9">
-
-      </div>
- 
    
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
