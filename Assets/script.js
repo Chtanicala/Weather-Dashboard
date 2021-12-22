@@ -74,13 +74,11 @@ let displayFuture = (data) => {
             <li id="wind-current">Wind Speed: ${data.list[0].wind.speed} mph</li>
             
             <li id="humidity-current">Humidity Level: ${data.list[0].main.humidity}%</li>
-
-            <li id="uv-current">UV Index: ${data.list[0].main.humidity} </li>
             </ol>
         </div>
     `
 
-    let futureOne = `
+    let futureDayOne = `
             <div class="container row col-12" id="forecast">
                 <div class="col-2 card forecast-day">
                 <h4 id="date-1">${data.list[1].dt_txt}</h4>
@@ -93,9 +91,9 @@ let displayFuture = (data) => {
                 </ol>
             </div>
             `
-
-    $(currentDay).insertAfter("#history")
-    $(futureOne).insertAfter("#current-day")
+    $("#contentRemoval").empty()
+    $(currentDay).appendTo("#contentRemoval")
+    $(futureDayOne).insertAfter("#current-day")
 }
 
 // When the search button is clicke it submits the data to the search function to search for city/state
