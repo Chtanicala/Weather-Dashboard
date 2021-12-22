@@ -25,7 +25,9 @@ let searchResult = () => {
     .then(function (data) {
         console.log(data);
 
-        displayForecast(data)
+        // displayFuture(data)
+
+        $("#city-current").text(data.city.name)
     })
 
     .catch((error) => {
@@ -35,30 +37,30 @@ let searchResult = () => {
 
 
 
-let displayFuture = (data) => {
-    let futureForecast = '';
+// let displayFuture = (data) => {
+//     let futureForecast = '';
 
-        for (let i = 1; i < data.length; i++) {
+//         for (let i = 1; i < data.length; i++) {
             
-            futureForecast += `
-            <div class="container row col-12" id="forecast">
-                <div class="col-2 card forecast-day">
-                <h4 id="date-1">Date+1</h4>
-                <ol>
-                    <li id="temp-1">${data.main.temp}</li>
+//             futureForecast += `
+//             <div class="container row col-12" id="forecast">
+//                 <div class="col-2 card forecast-day">
+//                 <h4 id="date-1">Date+1</h4>
+//                 <ol>
+//                     <li id="temp-1">${data.main.temp}</li>
                     
-                    <li id="wind-1">Wind+1</li>
+//                     <li id="wind-1">Wind+1</li>
                     
-                    <li id="humidity-1">Humidity+1</li>
-                </ol>
-            </div>
-            `
+//                     <li id="humidity-1">Humidity+1</li>
+//                 </ol>
+//             </div>
+//             `
             
-        }
+//         }
 
-        $(futureForecast).insertAfter("#current-day")
-        console.log(futureForecast)
-}
+//         $(futureForecast).insertAfter("#current-day")
+//         console.log(futureForecast)
+// }
 
 // When the search button is clicke it submits the data to the search function to search for city/state
 searchBtn.addEventListener("click", searchResult)
