@@ -25,9 +25,9 @@ let searchResult = () => {
     .then(function (data) {
         console.log(data);
 
-        // displayFuture(data)
+        displayFuture(data)
 
-        $("#city-current").text(data.city.name)
+        
     })
 
     .catch((error) => {
@@ -61,6 +61,42 @@ let searchResult = () => {
 //         $(futureForecast).insertAfter("#current-day")
 //         console.log(futureForecast)
 // }
+
+let displayFuture = (data) => {
+
+    let currentDay = `
+        <div class="container col-3" id="current-day">
+            
+            <h2 id="city-current">${data.city.name} (${data.list[0].dt_txt})</h2>
+            <ol>
+            <li id="temp-current">Tempature: ${data.list[0].main.temp} F</li>
+            
+            <li id="wind-current">Wind Speed: ${data.list[0].wind.speed} mph</li>
+            
+            <li id="humidity-current">Humidity Level: ${data.list[0].main.humidity}%</li>
+
+            <li id="uv-current">UV Index: ${data.list[0].main.humidity} </li>
+            </ol>
+        </div>
+    `
+
+    let futureOne = `
+            <div class="container row col-12" id="forecast">
+                <div class="col-2 card forecast-day">
+                <h4 id="date-1">${data.list[1].dt_txt}</h4>
+                <ol>
+                    <li id="temp-1">Tempature: ${data.list[1].main.temp} F</li>
+                    
+                    <li id="wind-1">Wind Speed: ${data.list[1].wind.speed} mph </li>
+                    
+                    <li id="humidity-1">Humidity Level: ${data.list[1].main.humidity}%</li>
+                </ol>
+            </div>
+            `
+
+    $(currentDay).insertAfter("#history")
+    $(futureOne).insertAfter("#current-day")
+}
 
 // When the search button is clicke it submits the data to the search function to search for city/state
 searchBtn.addEventListener("click", searchResult)
