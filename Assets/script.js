@@ -1,5 +1,6 @@
 // Search Elements
-let searchEl = document.getElementById("searchInput")
+let searchEl = document.getElementById("city")
+let searchEl = document.getElementById("state")
 let searchBtn = document.getElementById("searchBtn")
 // Current Day Elements
 let currentCityEl = document.getElementById("city-current")
@@ -13,15 +14,30 @@ let currentUvEl = document.getElementById("uv-current")
 //Day + 4 Elements 
 //Day + 5 Elements 
 
+// API
+let apiLinkFormat = "api.openweathermap.org/data/2.5/forecast?q={city name},{state code},{country code}&units=imperial&appid=7aa6a99f3c6b2918ed1aa6023a5c4fdd"
+
+
 let searchResult = () => {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchEl.value},US&units=imperial&cnt=7&appid=7aa6a99f3c6b2918ed1aa6023a5c4fdd`)
     .then(response => response.json())
-    .then(data => console.log(data));
+
+    .then(function (data) {
+        console.log(data);
+        displayWeather(data);
+    })
+    .catch((error) => {
+        console.log("FETCH ERROR", error)
+    })
+}
+
+let displayWeather = (data) => {
+    data.list
 }
 
 searchBtn.addEventListener("click", searchResult)
 
-let apiLinkFormat = "api.openweathermap.org/data/2.5/forecast?q={city name},{state code},{country code}&units=imperial&appid=7aa6a99f3c6b2918ed1aa6023a5c4fdd"
+
 
 // fetch(apiLink)
 //     .then(response => response.json())

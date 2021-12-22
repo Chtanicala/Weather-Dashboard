@@ -21,7 +21,7 @@
 
       <div class="container col-3">
 
-            <h2 class="row text-center" id="city-search">Search for a City:</h2>
+            <!-- <h2 class="row text-center" id="city-search">Search for a City:</h2>
             
             <div class="row" id="search-input-container">
               <input id="searchInput" type ="text">
@@ -29,7 +29,25 @@
 
             <div class="row" id="search-button-container">
               <button class ="button" id="searchBtn">Search</button>
-            </div>
+            </div> -->
+
+
+            <form id="city-search">
+              <h1>Search for a City's Weather Report!</h1>
+              <div class="field">
+                <label for="city">City</label>
+                <input type="text" class="searchInput" id="city" name="city" placeholder="Please Enter a City" />
+                <small></small>
+              </div>
+              <div class="field">
+                <label for="State">State</label>
+                <input type="text" class="searchInput" id="state" name="state" placeholder="Please Select a State"/>
+                <small></small>
+              </div>
+              <div class="field" id="search-button-container">
+                <button type="submit" id="searchBtn" class="button">Search</button>
+              </div>
+            </form>
 
       </div>
 
