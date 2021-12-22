@@ -1,6 +1,6 @@
 // Search Elements
-let searchEl = document.getElementById("city")
-let searchEl = document.getElementById("state")
+let cityEl = document.getElementById("city").value
+let stateEl = document.getElementById("state").value
 let searchBtn = document.getElementById("searchBtn")
 // Current Day Elements
 let currentCityEl = document.getElementById("city-current")
@@ -17,24 +17,50 @@ let currentUvEl = document.getElementById("uv-current")
 // API
 let apiLinkFormat = "api.openweathermap.org/data/2.5/forecast?q={city name},{state code},{country code}&units=imperial&appid=7aa6a99f3c6b2918ed1aa6023a5c4fdd"
 
-
+// Function to search for a city and state based on user input
 let searchResult = () => {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchEl.value},US&units=imperial&cnt=7&appid=7aa6a99f3c6b2918ed1aa6023a5c4fdd`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityEl},${stateEl}US&units=imperial&cnt=7&appid=7aa6a99f3c6b2918ed1aa6023a5c4fdd`)
     .then(response => response.json())
 
     .then(function (data) {
         console.log(data);
-        displayWeather(data);
+
+        displayForecast(data)
     })
+
     .catch((error) => {
         console.log("FETCH ERROR", error)
     })
 }
 
-let displayWeather = (data) => {
-    data.list
+
+
+let displayFuture = (data) => {
+    let futureForecast = '';
+
+        for (let i = 1; i < data.length; i++) {
+            
+            futureForecast += `
+            <div class="container row col-12" id="forecast">
+                <div class="col-2 card forecast-day">
+                <h4 id="date-1">Date+1</h4>
+                <ol>
+                    <li id="temp-1">${data.main.temp}</li>
+                    
+                    <li id="wind-1">Wind+1</li>
+                    
+                    <li id="humidity-1">Humidity+1</li>
+                </ol>
+            </div>
+            `
+            
+        }
+
+        $(futureForecast).insertAfter("#current-day")
+        console.log(futureForecast)
 }
 
+// When the search button is clicke it submits the data to the search function to search for city/state
 searchBtn.addEventListener("click", searchResult)
 
 

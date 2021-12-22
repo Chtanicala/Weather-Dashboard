@@ -9,6 +9,11 @@ header {
     text-align: center;
 }
 
+select{
+    text-align-last: center;
+    direction: ltr;
+}
+
 #search-button-container {
     border-bottom: 2px solid black;
     padding-bottom: 1rem;
