@@ -28,8 +28,15 @@ select{
     width: 100%
 }
 
-#current {
+#current-day {
+    background-color: rgb(0, 204, 255);
     border: 2px solid black;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 30px;
+    border-color: rgb(0, 98, 155);
+    border-width: 3px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.596);
 }
 
 .card {
@@ -56,4 +63,22 @@ h4 {
 li {
     list-style-type: none;
     margin-bottom: 3%;
+}
+
+.previousSearch {
+    padding: 10px;
+    border: 1px solid black;
+    color: white;
+    background-color: slategrey;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 24px;
+    text-align: center;
+    width: 25%;
+}
+
+#historyBtn {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
