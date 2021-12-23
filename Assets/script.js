@@ -29,7 +29,7 @@ let searchResult = () => {
         
         let historyBtnEl = `
         <div>
-            <button type="button" id="historyBtn" class="button">${cityEl},${stateEl}</button>
+            <button type="button" class="button historyBtn">${cityEl},${stateEl}</button>
         </div>
         `
 
@@ -84,7 +84,7 @@ let displaySearchHistory = () => {
     for (let i = 0; i < localStorage.length; i++) {
         let historyBtnEl = `
         <div>
-            <button type="button" id="historyBtn" class="button">${cityEl},${stateEl}</button>
+            <button type="button" class="button historyBtn">${cityEl},${stateEl}</button>
         </div>
         `
 
