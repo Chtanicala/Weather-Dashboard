@@ -21,8 +21,8 @@
 - Christian Tanicala
 
 ## Links
+- https://github.com/Chtanicala/Weather-Dashboard (Deployed)
 - https://github.com/Chtanicala/Weather-Dashboard (Repository)
-- https://github.com/Chtanicala/Team-Profile-Generator/blob/main/index.js (Index.js File)
 
 ## Screenshots
 - ![Application](Assets/pictures/Mock.PNG)
