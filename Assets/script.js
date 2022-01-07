@@ -60,28 +60,76 @@ let displayWeather = (data) => {
         </div>
     `
 
-    let futureDayOne = `
-            <div class="container row col-12" id="forecast">
+    let forecast = `
+            <div class="container row col-12" id="forecastOne">
                 <div class="col-2 card forecast-day">
-                <h4 id="date-1">${data.list[1].dt_txt}</h4>
-                <ol>
-                    <li id="temp-1">Tempature: ${data.list[1].main.temp} F</li>
-                    
-                    <li id="wind-1">Wind Speed: ${data.list[1].wind.speed} mph </li>
-                    
-                    <li id="humidity-1">Humidity Level: ${data.list[1].main.humidity}%</li>
-                </ol>
+                    <h4 id="date-1">${data.list[1].dt_txt}</h4>
+                    <ol>
+                        <li id="temp-1">Tempature: ${data.list[1].main.temp} F</li>
+                        
+                        <li id="wind-1">Wind Speed: ${data.list[1].wind.speed} mph </li>
+                        
+                        <li id="humidity-1">Humidity Level: ${data.list[1].main.humidity}%</li>
+                    </ol>
+                </div>
+
+                <div class="col-2 card forecast-day">
+                    <h4 id="date-1">${data.list[2].dt_txt}</h4>
+                    <ol>
+                        <li id="temp-1">Tempature: ${data.list[2].main.temp} F</li>
+                        
+                        <li id="wind-1">Wind Speed: ${data.list[2].wind.speed} mph </li>
+                        
+                        <li id="humidity-1">Humidity Level: ${data.list[2].main.humidity}%</li>
+                    </ol>
+                </div>
+
+                <div class="col-2 card forecast-day">
+                    <h4 id="date-1">${data.list[3].dt_txt}</h4>
+                    <ol>
+                        <li id="temp-1">Tempature: ${data.list[3].main.temp} F</li>
+                        
+                        <li id="wind-1">Wind Speed: ${data.list[3].wind.speed} mph </li>
+                        
+                        <li id="humidity-1">Humidity Level: ${data.list[3].main.humidity}%</li>
+                    </ol>
+                </div>
+
+                <div class="col-2 card forecast-day">
+                    <h4 id="date-1">${data.list[4].dt_txt}</h4>
+                    <ol>
+                        <li id="temp-1">Tempature: ${data.list[4].main.temp} F</li>
+                        
+                        <li id="wind-1">Wind Speed: ${data.list[4].wind.speed} mph </li>
+                        
+                        <li id="humidity-1">Humidity Level: ${data.list[4].main.humidity}%</li>
+                    </ol>
+                </div>
+
+                <div class="col-2 card forecast-day">
+                    <h4 id="date-1">${data.list[5].dt_txt}</h4>
+                    <ol>
+                        <li id="temp-1">Tempature: ${data.list[5].main.temp} F</li>
+                        
+                        <li id="wind-1">Wind Speed: ${data.list[5].wind.speed} mph </li>
+                        
+                        <li id="humidity-1">Humidity Level: ${data.list[5].main.humidity}%</li>
+                    </ol>
+                </div>
             </div>
             `
 
 
     $("#contentRemoval").empty()
     $(currentDay).appendTo("#contentRemoval")
-    $(futureDayOne).insertAfter("#current-day")
+    $(forecast).insertAfter("#current-day")
+
 }
 
 let displaySearchHistory = () => {
     for (let i = 0; i < localStorage.length; i++) {
+        let cityEl = document.getElementById("city").value
+        let stateEl = document.getElementById("state").value
         let historyBtnEl = `
         <div>
             <button type="button" class="button historyBtn">${cityEl},${stateEl}</button>
