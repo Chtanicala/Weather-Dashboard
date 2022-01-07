@@ -1,6 +1,4 @@
 // Search Elements
-let cityEl = document.getElementById("city").value
-let stateEl = document.getElementById("state").value
 let searchBtn = document.getElementById("searchBtn")
 // Current Day Elements
 let currentCityEl = document.getElementById("city-current")
@@ -19,6 +17,8 @@ let apiLinkFormat = "api.openweathermap.org/data/2.5/forecast?q={city name},{sta
 
 // Function to search for a city and state based on user input
 let searchResult = () => {
+    let cityEl = document.getElementById("city").value
+    let stateEl = document.getElementById("state").value
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityEl},${stateEl}US&units=imperial&cnt=7&appid=7aa6a99f3c6b2918ed1aa6023a5c4fdd`)
     .then(response => response.json())
 
