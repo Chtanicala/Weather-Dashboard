@@ -20,7 +20,7 @@
 - Christian Tanicala
 
 ## Links
-- https://github.com/Chtanicala/Weather-Dashboard (Deployed)
+- https://chtanicala.github.io/Weather-Dashboard/(Deployed)
 - https://github.com/Chtanicala/Weather-Dashboard (Repository)
 
 ## Screenshots
